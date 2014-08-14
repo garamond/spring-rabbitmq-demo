@@ -10,8 +10,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import java.util.UUID;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = RabbitTestConfig.class)
-public class RabbitTest {
+@ContextConfiguration(classes = IntegrationTestConfig.class)
+public class IntegrationTest {
 
     @Autowired
     TestService testService;

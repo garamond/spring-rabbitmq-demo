@@ -17,7 +17,7 @@ import org.springframework.integration.handler.ServiceActivatingHandler;
 @ImportResource(value = {"rabbitmq-config.xml"})
 @IntegrationComponentScan(value = "ch.grmnd.lab")
 @EnableIntegration
-abstract class RabbitTestConfig {
+abstract class IntegrationTestConfig {
 
     /**
      * {@code TestService} is hidden behind {@code TestServiceGateway} in order to prevent

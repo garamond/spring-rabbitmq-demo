@@ -4,8 +4,8 @@ This simple application is a demonstration of running Spring Integration communi
 
 Features:
 
- * The configuration of Spring Integration is isolated and done with annotations (inside the `RabbitTestConfig` class)
- * XML configuration is limited to the basic "plumbing": channel definitions, Spring AMQP and RabbitMQ (in `src/test/resources/rabbitmq-config.xml`)
+ * The configuration of Spring Integration is isolated and done with JavaConfig annotations (inside the `IntegrationTestConfig` class)
+ * XML configuration is limited to the basic "plumbing": channel definitions, Spring AMQP and RabbitMQ (in `rabbitmq-config.xml`)
 
 ## Getting started
 
@@ -20,7 +20,7 @@ To verify the result, run:
 	
 ## Explanation
 
-This is what happens in the `RabbitTest` test:
+This is what happens in the `IntegrationTest` test:
 
 An instance of `TestEntity` gets passed to the interface method `TestService#process` (proxied by Spring), pushed through the Spring Integration plumbing over the Spring AMQP adapters onto RabbitMQ; from there it passes up the same stack to a "service activator" bean. An output value is determined and sent back through the same mechanism; it pops out of the proxied interface and gets compared to the input.
 
