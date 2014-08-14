@@ -25,12 +25,13 @@ This is what happens in the `RabbitTest` test:
 An instance of `TestEntity` gets passed to the interface method `TestService#process` (proxied by Spring), pushed through the Spring Integration plumbing over the Spring AMQP adapters onto RabbitMQ; from there it passes up the same stack to a "service activator" bean. An output value is determined and sent back through the same mechanism; it pops out of the proxied interface and gets compared to the input.
 
 	TestEntity 
-	--> TestServiceGateway#process 
-	 <--> Spring Integration
-	  <--> AQMP adapters
+	--> TestService#process 
+	 <--> Spring Integration gateway
+	  <--> AQMP adapter
  	   <--> RabbitMQ
-	    <--> Spring Integration
-	     <--> TestServiceImpl#process
+  	    <--> AQMP adapter
+	     <--> Spring Integration service activator
+	      <--> TestServiceImpl#process
 
 ## Notes
 
