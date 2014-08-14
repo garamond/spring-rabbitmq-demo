@@ -1,9 +1,10 @@
 # Spring Integration over RabbitMQ annotation-config demo
 
-This simple application is a demonstration of running Spring Integration 4 over RabbitMQ with JavaConfig annotations an only minimal XML configuration.
+This simple application is a demonstration of running Spring Integration 4 over RabbitMQ with JavaConfig annotations and only minimal XML configuration.
 
 Features:
 
+ * Traverses the entire Spring Integration/Spring AMQP/RabbitMQ messaging stack. Twice.
  * The configuration of Spring Integration is isolated and done with JavaConfig annotations (inside the `IntegrationTestConfig` class)
  * XML configuration is limited to the basic "plumbing": channel definitions, Spring AMQP and RabbitMQ (in `rabbitmq-config.xml`)
 
@@ -11,7 +12,8 @@ Features:
 
 Requirements:
 
- * Maven 3 stack
+ * Java 7+
+ * Maven 3
  * Running RabbitMQ service on localhost
 
 To verify the result, run:
