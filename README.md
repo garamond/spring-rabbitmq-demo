@@ -1,6 +1,6 @@
-# Spring Integration over RabbitMQ demo
+# Spring Integration over RabbitMQ annotation-config demo
 
-This simple application is a demonstration of running Spring Integration communication over RabbitMQ with minimal XML configuration.
+This simple application is a demonstration of running Spring Integration 4 over RabbitMQ with JavaConfig annotations an only minimal XML configuration.
 
 Features:
 
