@@ -19,8 +19,8 @@ public class IntegrationTest {
     @Test
     public void testSendAndReceive() throws Exception {
 
-        final Object testVal = UUID.randomUUID().toString();
-        final Object res = testService.process(new TestEntity(testVal));
+        final String testVal = UUID.randomUUID().toString();
+        final String res = testService.process(new TestEntity(testVal));
         Assert.assertEquals(testVal, res);
 
     }

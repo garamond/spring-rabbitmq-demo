@@ -2,6 +2,6 @@ package ch.grmnd.lab;
 
 interface TestService {
 
-    Object process(TestEntity testEntity);
+    String process(TestEntity testEntity);
 
 }

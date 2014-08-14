@@ -7,13 +7,13 @@ import java.io.Serializable;
  */
 class TestEntity implements Serializable {
 
-    private final Object value;
+    private final String value;
 
-    public TestEntity(Object value) {
+    public TestEntity(String value) {
         this.value = value;
     }
 
-    public Object getValue() {
+    public String getValue() {
         return value;
     }
 
